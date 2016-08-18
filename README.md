@@ -1,2 +1,2 @@
 # my-repo
-My First Repo
+My First Repo created in GitHub
