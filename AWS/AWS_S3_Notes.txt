@@ -1,0 +1,76 @@
+Identity Access Management:
+	-IAM: Used to manage users and their access to AWS console
+		-Centralised control
+		-Shared Access
+		-Granular Permission
+		-Identity Federation(Facebook, Linkedin etc)
+		-Multifactor Authentication
+		-Provide temporary access for users/devices and services
+		-Setup Password rotation policy
+		-Integrates with different AWS services
+		-Supports PCI DSS compliance
+
+-Manage User & Group
+	-AccessKeyId & SecretAccessKey can be used for programmatically(commandline or APIs) reasons. To access AWS console use the UserName and Password.
+
+S3 101:
+	-Safe place to store your files
+	-Object based storage(videos, photos, doc, pdf, flat files)
+	-Block based storage(DB, OS)
+	-Data is spread across multiple devices and facilities
+	-Bucket(folder) is where the files are stored, bucket names are unquiue globally as its in Universal namespace(Url for bucketName - s3.regionName.amazonaws.com/bucketName)
+	-Data Consistency Model
+		-Read after write consistency for PUTS of new objects
+		-Eventual Consistency for overwrite PUTS and DELETES(can take some time to propagate as it span into multiple facilities)
+	-S3 objects are Simple Key-Value store
+		-Key: Name of the object
+		-Value: Data being stored
+		-VersionId
+		-Metadata (Data about data like file info)
+		-Subresources: Exists underneath the object
+			-Access Control list
+			-Torrent Support (Bit Torrent protocol)
+	-Lifecycle Management
+	-S3 99.99% availability
+	-11X9's durability for S3 information
+	-S3-IA: Infrequently Accessed (accessed very rarely)
+	- SA - One Zone
+	-Glacier: Very cheap for archival only, it takes 3-5 hours to restore
+	-Reduce Redundancy Storage: Data that's easily reproducible such as thumb nail etc.
+		-RRS Availability: 99.99%
+		-RRS Durability: 99.99%
+	-Charged for
+		-Storage
+		-No.Of.Request
+		-Storage management pricing
+		-Data Transfer Pricing(incoming is free, but will be charged for moving around)
+		-Transfer Acceleration
+	-Exam tip - Read S3 FAQ
+	-S3 - Crosss Region Replication 
+		-Versioning must be enabled
+		-Regions must be unique
+		-Files in the existing bucket are not replicated automatically, all subsequent or future updates will be replicated.
+		-Delete markers are replicated 
+		-Deleting individual versions are not replicated
+	-S3 - Lifecycle Management Lab
+		-Can be used in conjuction with Versioning
+		-Applied to both current & previous versions
+		-Transition to Standard-IA storage classwith minimum 128Kb and 30day after creation date
+		-Archive to Glacier storage class with configured no.of.days after IA.
+
+Snowballs:
+	Onboard storage with 50 TB or 80TB
+	256-bit encryption
+	Trusted Platform Module (TPM) - Designed to ensure both security and full chain-of-custody of data
+
+Snowball Edge:
+	-Onboard storage with 100TB with compute capability(mini version of AWS in a box)
+Snowball Mobile
+	-100PB in a container driven by a semi trailor, currently only available in US.
+S3 Storage Acceleration:
+	-It cost little extra first copy to edge location closer to your region and then moved into S3 bucket	
+Static Website Hosting:
+	-URL pattern (bucketName.S3-website-REGION_NAME.amazonaws.com)	
+	-Severless website
+	-Static only files
+

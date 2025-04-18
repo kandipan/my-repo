@@ -1,0 +1,50 @@
+Elastic Compute Cloud 101:
+	-Virtual machine on the cloud that provides resizable compute capacity. Scaling capacity both up and down as your computing requirements change.
+	-EC2 Options:
+		-On Demand: Allows you to pay a fixed rate by the hour(or by second) with NO commitment
+		-Reserved(Contract based): Gives you with capacity reservation and offers significant discount on the hourly charge. Steady state and reserved capacity
+		-Spot(like stock market): Rates goes up and down gives you even greater savings if your app have flexible start and end times.
+		-Dedicated Hosts(No sharing of servers, for eg gov applications): Physical EC2 server dedicated for your use. Can help you reduce the costs by allowing you to use your existing server-bound software licenses
+	-EC2 Instance Types:
+		-D for Density
+		-R for Ram
+		-M for Main choice for General purpose apps
+		-C for Compute
+		-G for Graphics
+		-I for IOPS (Input/Output Operations per Second)
+		-F for FPGA (Field Programmable Gate Arrays)
+		-T for cheap general purpose
+		-P for Graphics(think pics)
+		-X for Extreme Memory 
+
+	-EBS:
+		-Block based storage volumes and attache them to the AMZ EC2 instances. Once attached you can create file system, run DB and OS on these volumes.
+		-EBS Volume types
+			-General Purpose SSD(GP2)
+				-Balance both price and Performance
+				-Ration of 3 IOPS per GB with up to 10K IOPS and the ability to burst upto 3K IOPS for extended periods of time for volumes at 3334 GiB and above
+			-Provisioned IOPS SSD(IO1)
+				-IO intensive applications such as DB or No sql db.
+				-Use if 10K IOPS or more
+				-Can provision upto 20K IOPS per volumne
+			-Throughput Optimized HHD(ST1) magnetic stroage type
+				-BigData
+				-DW
+				-Log Processing
+				-Cannot be boot volumes
+			-Cold HDD(SC1)
+				-Low cost storage for infrequently accessed workloads
+				-File server
+				-No boot volumes
+			-Magnetic (Standrad)
+				-Lowest cost per gigabytes of all EBS volume types thats bootable.
+				-Ideal for workloads where data is accessed infrequently
+	-EC2 Monitor Settings
+		-Basic Monitoring: pinging the syste every 5 min (by default)
+		-Detailed Monitoring: pinging the system every 1 min (costs little bit extra)
+		
+
+
+
+
+

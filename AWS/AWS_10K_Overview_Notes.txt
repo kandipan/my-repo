@@ -1,0 +1,110 @@
+AWS Notes
+
+AWS Global Infrastructure:
+	-Region: Geographyical area with 2 or more AZ
+	-Availability Zone: Physical Data center
+	-CDN: Content Delivery Network is basically a cache location
+	-Edge Location: Are the end points of the CDN, currently there are more edge location than Region, there are 66 EL.
+
+Networking Content Delivery:
+	- VPC : Virtually Private Cloud
+	- Route 53 - Amazon DNS server (53 is the DNS port#, so it named after the first Interstate across US is I-66)
+	- Clound Front : Bunch of differnt Edge locatoin(CDN)
+	- Direct connect : Dedicated line from our office to AWS network
+
+Compute:	
+	- EC2(Elastic Compute Cloud): Virtual machines in the cloud
+	- EC2 Container Service : Highly scalable container managed service which supports Docker container
+	- Elastic Beanstak : Helper to setup the infrastructure to setup your app on the cloud
+	- Lambda: Server less, upload your code then it will respond to the events (Amazon Echo/Alexa)
+	- Lightsail : Out of box cloud
+
+Storage:
+	- S3(Simple Storage Service) : Virutal disk in the cloud, object based storage(e.g: Dropbox). DB are block based storage
+	- Glacier: Archive your files from S3, as gov regulation to hold the files for a period of 7 yrs
+	- EFS(Elastic File Service): File based storage
+	-Storage Gateway: Way of connecting S3 with your on premise data center
+
+Databases:
+	-RDS: Relational DB
+	-Dynamo DB - Non relatoinal DB
+	-Redshift: Amz data warehousing solutions used to create reports on the production like env.
+	-Elasticache: Caching infrastructure
+
+Migratoin:
+	-Snowball: Started as import/export of data to/from disk with terrabytes of data.	
+	-DMS: DB migration services from on permise to AWS cloud(No down time) Re-Invent 2015
+	-Server Migration Services(SMS) for on permise servers to AWS cloud
+
+Analytics:
+	-Athena: Allows to run SQL queries on S3, kind of turning your file files data into RDB  
+	-EMR(Elastic Map Reducer): Big data processing framework Hadoob, Apache Spark
+	-Cloud Search: Search engine for your application or website, by AWS
+	-Elastic Search: Open source framework
+	-Kinesis: Streaming and analyzing data in real time(e.g.Social media data) 
+	-Data Pipeline: Service to move data from one pipeline to another(e.e S3 to DynamoDB or viceversa)
+	-Quick Sight: Biz analytic tool for S3, Dynambo DB
+
+Security & Identity:
+	-IAM: very important in SA exam as its a fundamental identity in access management section
+	-Inspector: Used to inspects the VM
+	-Certificate Manager: SSL details
+	-Directory Service:
+	-WAF: Web App Firewall used to provide security to the web application
+	-Artifacts: ISO certification
+
+Management Tools:
+	-Cloud Watch: Used to monitor performance of the application Disk, Ram and CPU utilization etc.,
+	-Cloud Formation: Turning your infrastructure into code
+	-Cloud Trail: Used for auditing the changes to the environment
+	-OpsWorks: Automating the operation works
+	-Config: Monitors your env and alerts you when a specific config has been broken. 	
+	-Service Catalog: Designed for larger enterprises is to authorize the services in the organization
+	-Trusted Advisor: Tips to give optimize your env.
+
+Applicatoin Services:
+	-Step Functions: Whats going on in your application
+	-SWF(Simple workflow Services): 
+	-API Gateway: Tools allows you to create, monitor backend services
+	-App Stream: streaming desktop applicatoin
+	-Elastic Transcoder: Transcode the uploaded video to be playable in all devices.
+
+Developer Tools:
+	-Code Commit: Github to store your code
+	-CodeBuild: Compiling the code
+	-Code Deploy: Deploying your code into server
+	-CodePipeline: To deploy code in different env
+
+Mobile Services:
+	-Mobile Hub: Console for Mobile app
+	-Cognito: Signup and Sign into your app
+	-DeviceFarm: Farm of all different devices to test the app
+	-Mobile Analytics: Cost effectively collect and analyze the mobile data
+	-Pinpoint: like Google Analytics to your mobile app 	
+
+Business Productivity:
+	-WorkDocs: documents
+	-WorkMail: Exchange of emails	
+
+Internet Of Thinks:(2015)
+	-iOT: 
+
+Desktop & App Streaming:
+	-WorkSpaces: Way of having desktop in the cloud
+	-AppStream 2.0: Streaming desktop app to the users
+
+Artificial Intelligence:(2015)
+	-alexa: AMZ voice communication service using echo
+	-lex: Dont need echo to communicate
+	-Polly: Engine converts text response to voice reply (Echo & Alexa)
+	-Machine Learning: Give AWS a data set which will be anaylzed (Allows you to predict based on pervious shopping/performance data)
+	-Rekognition: upload a picture which will be recognized and gives you % of recognition
+
+Messaging:
+	-SNS: Simple Notification Services via email or text msg
+	-SQS: Simple Queue system
+	-SES: Simple Email Service	
+
+*****************After the Changes to test S3 Versioning**********************
+
+
